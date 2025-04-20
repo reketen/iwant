@@ -138,8 +138,16 @@ body {
 }
 
 @media (max-width: 768px) {
+    body, html {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+    }
+    
     .app-container {
         flex-direction: column;
+        height: 100%;
     }
     
     .column {
@@ -149,7 +157,8 @@ body {
     
     .items-column {
         flex: 2;
-        height: 70vh;
+        height: 65vh;
+        padding-bottom: 0;
     }
     
     .lists-container {
@@ -159,7 +168,16 @@ body {
     }
     
     .list-section {
-        height: 50%;
+        height: 48%;
+        overflow: hidden;
+        padding: 8px;
+    }
+    
+    .scrollable-items {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-right: 5px;
+        padding-bottom: 15px;
     }
     
     .main-button {
@@ -168,14 +186,24 @@ body {
         margin: 5px 0;
     }
     
+    .item {
+        padding: 8px;
+        min-height: 90px;
+        margin-bottom: 8px;
+    }
+    
+    .item:last-child {
+        margin-bottom: 20px;
+    }
+    
     .item img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         margin-bottom: 5px;
     }
     
     .item p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 
