@@ -148,28 +148,32 @@ body {
     .app-container {
         flex-direction: column;
         height: 100%;
+        display: flex;
     }
     
     .column {
         height: auto;
-        padding: 6px;
+        padding: 3px;
+        min-height: 0;
     }
     
     .column:nth-child(1), .column:nth-child(2) {
         flex: 0 0 auto;
-        height: auto;
-        max-height: 18%; /* Limit the height of the I and WANT button columns */
+        height: 60px; /* Even smaller fixed height */
+        max-height: 60px;
         min-height: 0;
+        margin-bottom: 3px;
     }
     
     .items-column {
         flex: 1;
         height: auto;
         min-height: 0;
-        padding: 5px;
+        padding: 3px;
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+        margin-top: 5px;
     }
     
     .lists-container {
@@ -205,11 +209,15 @@ body {
     }
     
     .main-button {
-        font-size: 2rem; /* Reduced font size */
-        height: 100%;
-        margin: 4px 0;
-        padding: 8px;
-        max-height: 80px; /* Maximum height for the buttons */
+        font-size: 1.7rem; /* Further reduced font size */
+        height: 50px; /* Smaller fixed height */
+        margin: 0;
+        padding: 3px;
+        max-height: 50px;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .item {
