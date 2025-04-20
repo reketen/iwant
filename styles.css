@@ -157,7 +157,7 @@ body {
     
     .items-column {
         flex: 2;
-        height: 65vh;
+        height: 60vh;
         padding-bottom: 0;
     }
     
@@ -165,19 +165,23 @@ body {
         flex-direction: column;
         gap: 10px;
         height: 100%;
+        padding-bottom: 20px;
     }
     
     .list-section {
-        height: 48%;
+        height: 45%;
         overflow: hidden;
         padding: 8px;
+        margin-bottom: 15px;
+        max-height: calc(50% - 20px);
     }
     
     .scrollable-items {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         padding-right: 5px;
-        padding-bottom: 15px;
+        padding-bottom: 40px;
+        max-height: calc(100% - 10px);
     }
     
     .main-button {
@@ -188,17 +192,17 @@ body {
     
     .item {
         padding: 8px;
-        min-height: 90px;
-        margin-bottom: 8px;
+        min-height: 85px;
+        margin-bottom: 12px;
     }
     
     .item:last-child {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     
     .item img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         margin-bottom: 5px;
     }
     
