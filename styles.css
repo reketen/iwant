@@ -148,7 +148,7 @@ body {
     .app-container {
         flex-direction: column;
         height: 100%;
-        position: relative; /* For absolute positioning of children */
+        position: relative;
     }
     
     /* Reset all column styles first */
@@ -161,55 +161,56 @@ body {
         position: static;
     }
     
-    /* Absolute positioning approach for buttons */
+    /* Absolute positioning with balanced sizes */
     .column:nth-child(1) {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 35px;
-        padding: 0;
+        height: 50px; /* Increased from 35px */
+        padding: 5px 10px;
         z-index: 10;
     }
     
     .column:nth-child(2) {
         position: absolute;
-        top: 35px; /* Position right after first button */
+        top: 50px; /* Position after first button */
         left: 0;
         width: 100%;
-        height: 35px;
-        padding: 0;
+        height: 50px; /* Increased from 35px */
+        padding: 5px 10px;
         z-index: 10;
     }
     
-    /* Items column needs to be pushed down */
+    /* Items column pushed down accordingly */
     .items-column {
         position: absolute;
-        top: 70px; /* Position after both buttons */
+        top: 100px; /* Position after both buttons */
         left: 0;
         right: 0;
         bottom: 0;
-        padding: 2px;
+        padding: 5px;
         overflow: hidden;
     }
     
-    /* Very small buttons */
+    /* Balanced button size */
     .main-button {
         width: 100%;
-        height: 35px;
-        font-size: 1.2rem;
-        padding: 0;
+        height: 100%;
+        max-height: 50px;
+        font-size: 1.5rem; /* Increased from 1.2rem */
+        padding: 5px;
         margin: 0;
-        border-radius: 8px;
+        border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
     }
     
     .lists-container {
         flex-direction: column;
-        gap: 3px;
+        gap: 5px;
         height: 100%;
         padding: 0;
         display: flex;
