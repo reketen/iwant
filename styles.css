@@ -230,6 +230,87 @@ body {
     }
 }
 
+/* Landscape mode fixes */
+@media (max-width: 900px) and (orientation: landscape) {
+    body, html {
+        height: 100%;
+        position: fixed;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .app-container {
+        flex-direction: row;
+        height: 100%;
+    }
+    
+    .column {
+        padding: 5px;
+        height: 100%;
+    }
+    
+    .main-button {
+        font-size: 2rem;
+        height: 70%;
+    }
+    
+    .items-column {
+        flex: 3;
+        height: 100%;
+        padding: 5px;
+    }
+    
+    .lists-container {
+        flex-direction: row;
+        gap: 8px;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .list-section {
+        flex: 1;
+        height: 100%;
+        padding: 5px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .scrollable-items {
+        flex: 1;
+        overflow-y: auto;
+        padding: 5px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .item {
+        padding: 6px;
+        min-height: 0;
+        height: auto;
+        margin-bottom: 6px;
+        flex-shrink: 0;
+    }
+    
+    .item:last-child {
+        margin-bottom: 20px;
+    }
+    
+    .item img {
+        width: 28px;
+        height: 28px;
+        margin-bottom: 2px;
+    }
+    
+    .item p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+}
+
 /* Ensure scrollbar is usable and visible */
 .scrollable-items::-webkit-scrollbar {
     width: 6px;
