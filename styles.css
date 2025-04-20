@@ -148,50 +148,79 @@ body {
     .app-container {
         flex-direction: column;
         height: 100%;
-        display: flex;
+        position: relative; /* For absolute positioning of children */
     }
     
+    /* Reset all column styles first */
     .column {
+        flex: none;
         height: auto;
-        padding: 3px;
-        min-height: 0;
+        padding: 0;
+        margin: 0;
+        display: block;
+        position: static;
     }
     
-    .column:nth-child(1), .column:nth-child(2) {
-        flex: 0 0 auto;
-        height: 60px; /* Even smaller fixed height */
-        max-height: 60px;
-        min-height: 0;
-        margin-bottom: 3px;
+    /* Absolute positioning approach for buttons */
+    .column:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 35px;
+        padding: 0;
+        z-index: 10;
     }
     
+    .column:nth-child(2) {
+        position: absolute;
+        top: 35px; /* Position right after first button */
+        left: 0;
+        width: 100%;
+        height: 35px;
+        padding: 0;
+        z-index: 10;
+    }
+    
+    /* Items column needs to be pushed down */
     .items-column {
-        flex: 1;
-        height: auto;
-        min-height: 0;
-        padding: 3px;
+        position: absolute;
+        top: 70px; /* Position after both buttons */
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2px;
+        overflow: hidden;
+    }
+    
+    /* Very small buttons */
+    .main-button {
+        width: 100%;
+        height: 35px;
+        font-size: 1.2rem;
+        padding: 0;
+        margin: 0;
+        border-radius: 8px;
         display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        margin-top: 5px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
     
     .lists-container {
         flex-direction: column;
-        gap: 5px;
-        height: auto;
+        gap: 3px;
+        height: 100%;
         padding: 0;
         display: flex;
-        flex: 1;
-        min-height: 0;
+        overflow: hidden;
     }
     
     .list-section {
         height: auto;
-        min-height: 0;
         flex: 1;
-        overflow: auto;
-        padding: 5px;
+        overflow: hidden;
+        padding: 3px;
         margin: 0;
         display: flex;
         flex-direction: column;
@@ -203,26 +232,12 @@ body {
         padding: 0;
         margin: 0;
         flex: 1;
-        min-height: 0;
         display: flex;
         flex-direction: column;
     }
     
-    .main-button {
-        font-size: 1.7rem; /* Further reduced font size */
-        height: 50px; /* Smaller fixed height */
-        margin: 0;
-        padding: 3px;
-        max-height: 50px;
-        line-height: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
     .item {
         padding: 5px;
-        min-height: 0;
         height: auto;
         margin-bottom: 5px;
         display: flex;
