@@ -155,6 +155,13 @@ body {
         padding: 6px;
     }
     
+    .column:nth-child(1), .column:nth-child(2) {
+        flex: 0 0 auto;
+        height: auto;
+        max-height: 18%; /* Limit the height of the I and WANT button columns */
+        min-height: 0;
+    }
+    
     .items-column {
         flex: 1;
         height: auto;
@@ -198,9 +205,11 @@ body {
     }
     
     .main-button {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Reduced font size */
         height: 100%;
         margin: 4px 0;
+        padding: 8px;
+        max-height: 80px; /* Maximum height for the buttons */
     }
     
     .item {
